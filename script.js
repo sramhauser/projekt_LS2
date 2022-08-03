@@ -77,12 +77,41 @@ function onMessageArrived(message) {
     }
 }
 
-function sendMessage() {
-    message = new Paho.MQTT.Message(document.getElementById("payload").value);
-    message.destinationName = "/row/6/text";
-    client.send(message);
+function sendMessage( akce, idZasuvky) {
+
+    if (akce==0){
+        if(idZasuvky == 1){
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":1,\"Action\":0}]}");
+        } else if (idZasuvky == 2) { 
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":0}]}");
+        } else if(idZasuvky ==3) {
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":3,\"Action\":0}]}");
+        } else if(idZasuvky ==4) {
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":4,\"Action\":0}]}");
+        } else {
+            console.log("chyba - špatné idZasuvky")
+        }
+    }else if (akce==1){
+        if(idZasuvky == 1){
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":1,\"Action\":1}]}");
+        } else if (idZasuvky == 2) { 
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":1}]}");
+        } else if(idZasuvky ==3) {
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":3,\"Action\":1}]}");
+        } else if(idZasuvky ==4) {
+            message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":4,\"Action\":1}]}");
+        } else {
+            console.log("chyba - špatné idZasuvky")
+        }
+    } else{
+        console.log("špatný parametr zapnutí - vypnutí")
+    }
+    message.destinationName = "devices/netio/messages/devicebound/";
+    client.send(message)
 
 }
+
+
 
 
 
