@@ -1,12 +1,16 @@
-* {
+body {
     font-family: 'PT Sans', sans-serif;
-    background-image: url("obrazky/background.png");
+    background-image: url("obrazky/background.png"); /* jak nastavit, aby pozadí začínalo za headerem*/
 }
 
-h1,
-h2,
-p {
+h1{
     text-align: center;
+    font-size: 90px;
+}
+
+h2{
+    font-size: 30pt;
+    padding-left: 100px;
 }
 
 #ovladani {
@@ -74,4 +78,13 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     place-content: center;
+}
+
+.UvodDiv {
+    height: 500px;
+    width: 750px;
+    background-color: aqua; /* barva nemusí být vidět, jen pro "zarámování textu"*/
+    padding-left: 100px;
+    font-size: 20pt;
+    text-align: justify;
 }
