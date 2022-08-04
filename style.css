@@ -1,38 +1,42 @@
-*{
- font-family: 'PT Sans', sans-serif;
+* {
+    font-family: 'PT Sans', sans-serif;
+    background-image: url("obrazky/background.png");
 }
-h1, h2, p {
+
+h1,
+h2,
+p {
     text-align: center;
 }
 
-#ovladani{
-    display : grid;
+#ovladani {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
 }
 
-#horni-prava{
+#horni-prava {
     grid-column: 3;
     grid-row: 1
 }
 
-#horni-leva{
+#horni-leva {
     grid-column: 4;
     grid-row: 1
 }
 
-#spodni-prava{
+#spodni-prava {
     grid-column: 3;
     grid-row: 2
 }
 
-#spodni-leva{
+#spodni-leva {
     grid-column: 4;
     grid-row: 2
 }
 
-footer{
+footer {
     background-color: blueviolet;
 }
 
@@ -60,7 +64,9 @@ footer{
     padding: 20px 30px;
 }
 
-#menu a:hover, #menu a:focus, #menu a:active {
+#menu a:hover,
+#menu a:focus,
+#menu a:active {
     background-color: beige;
 }
 
