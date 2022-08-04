@@ -32,8 +32,8 @@ function onMessageArrived(message) {
 
     console.log("onMessageArrived:" + message.destinationName);
     console.log("onMessageArrived:" + message.payloadString);
-    // document.getElementById("temperature").innerText = message.payloadString;
-
+    //document.getElementById("vlhkost").innerText = message.payloadString;
+    
 
     let obj = JSON.parse(message.payloadString);
 
@@ -53,6 +53,9 @@ function onMessageArrived(message) {
 
         let vypisTeplB = document.querySelector("#teplotaB");
         vypisTeplB.textContent = obj.T2V1_value;
+        
+        automatOvladani(message);
+           
     }
 
     else if ("devices/netio/messages/events/" === message.destinationName) {
@@ -112,10 +115,28 @@ function sendMessage( akce, idZasuvky) {
 }
 
 
+function automatOvladani(message) {
 
+    console.log("onMessageArrived:" + message.payloadString);
 
+    let obj = JSON.parse(message.payloadString);
 
+    let vlhkostJeCislo = Number(obj.H1V2_value)
+    console.log(vlhkostJeCislo)
 
+    document.getElementById("vlhkost").innerText = vlhkostJeCislo;
 
+    if(vlhkostJeCislo > 51){
+        sendMessage(0, 2)
+       // message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":0}]}");
+        console.log("Vypnuto") 
+    }else if(vlhkostJeCislo <= 51){
+        sendMessage(1, 2)
+        //message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":1}]}");
+        console.log("Zapnuto") 
+    }else{
+        console.log("špatný parametr automatick0ho vyhodnocovani")
+    }
 
+}
 
