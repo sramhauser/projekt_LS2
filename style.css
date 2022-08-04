@@ -2,6 +2,33 @@ h1, h2, p {
     text-align: center;
 }
 
+#ovladani{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+#horni-prava{
+    grid-column: 3;
+    grid-row: 1
+}
+
+#horni-leva{
+    grid-column: 4;
+    grid-row: 1
+}
+
+#spodni-prava{
+    grid-column: 3;
+    grid-row: 2
+}
+
+#spodni-leva{
+    grid-column: 4;
+    grid-row: 2
+}
+
 footer{
     background-color: blueviolet;
 }
