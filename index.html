@@ -11,18 +11,22 @@
 
 <body>
     <header>
-        <img src="obrazky/logo.png" alt="logo" height="200px" style="float: left;">
+        <img src="obrazky/logo.png" alt="logo" height="200px">
         <h1>TOPENÍ NEJEN NA CHATĚ</h1>
     </header>
+    
+    
 
-    <nav>
-        <a href="#uvodInfo">úvodní informace</a>
-        <a href="#zasuvky">přehled zásuvek</a> 
-        <a href="#senzory">senzory</a>
-        <a href="#oNasAProjekt">o projektu a o nás</a>
+    <nav id="menu">
+        <ul>
+        <a href="#uvodInfo">Úvodní informace</a>
+        <a href="#zasuvky">Přehled zásuvek</a> 
+        <a href="#senzory">Senzory</a>
+        <a href="#oNasAProjekt">O projektu a o nás</a>
+        </ul>
     </nav>
-
-
+    
+    
     <section id="uvodInfo"> res rem id. Inventore maxime ex assumenda dicta, voluptatum ea itaque recusandae, ullam mollitia, doloremque quo blanditiis accusamus!
     Voluptatum molestias commodi excepturi quo aperiam, consectetur reiciendis aspernatur cupiditate perspiciatis quos. Dignissimos officiis accusamus eum hic nihil, praesentium cum pariatur a amet voluptatibus exercitationem natus, beatae maiores quo accusantium?
     Incidunt nostrum voluptatem magnam quas non. Neque adipisci, veritatis velit ab quibusdam doloremque nihil dicta ratione vitae, maiores voluptas sequi corporis repellendus cupiditate nesciunt exercitationem dolores. Provident, nobis? Illo, dolorem?
@@ -31,48 +35,53 @@
     Dolorum quae repudiandae laborum sint optio vel tempora? Repellendus eligendi quisquam alias cum nesciunt est necessitatibus, porro deserunt nihil consequatur enim nostrum natus culpa, sit suscipit in aspernatur recusandae ut.</section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
-    
-    <section id="zasuvky">
 
-        
+    <section id="zasuvky">
+    <div id="ovladani">
+
+        <div id="horni-prava">   
         <h1>ZASUVKA1</h1>
-        <p><button onclick="sendMessage(1,1)">Zapnout zásuvku 1</button></p>
-        <p><button onclick="sendMessage(0,1)">Vypnout zásuvku 1 </button></p>
-        <p id="ID1"></p>
-        <p id="jmeno1"></p>
-        <p id="stav1"></p>
-        <p id="prikonW1"></p>
-        <p id="SpotrebaWh1"></p>
-        
-        
-        <h1>ZASUVKA2</h1>
-        <p><button onclick="sendMessage(1,2)">Zapnout zásuvku 2</button></p>
-        <p><button onclick="sendMessage(0,2)">Vypnout zásuvku 2 </button></p>
-        <p id="ID2"></p>
-        <p id="jmeno2"></p>
-        <p id="stav2"></p>
-        <p id="prikonW2"></p>
-        <p id="SpotrebaWh2"></p>
-        
+            <p><button onclick="sendMessage(1,1)">Zapnout zásuvku 1</button></p>
+            <p><button onclick="sendMessage(0,1)">Vypnout zásuvku 1 </button></p>
+            <p id="ID1"></p>
+            <p id="jmeno1"></p>
+            <p id="stav1"></p>
+            <p id="prikonW1"></p>
+            <p id="SpotrebaWh1"></p>
+        </div>
+       
+        <div id="horni-leva">        
+                <h1>ZASUVKA2</h1>
+            <p><button onclick="sendMessage(1,2)">Zapnout zásuvku 2</button></p>
+            <p><button onclick="sendMessage(0,2)">Vypnout zásuvku 2 </button></p>           
+            <p id="ID2"></p>
+            <p id="jmeno2"></p>
+            <p id="stav2"></p>
+            <p id="prikonW2"></p>
+            <p id="SpotrebaWh2"></p>
+            </div>
+            
     
-        
+        <div id="spodni-prava">
         <h1>ZASUVKA3</h1>
-        <p><button onclick="sendMessage(1,3)">Zapnout zásuvku 3</button></p>
-        <p><button onclick="sendMessage(0,3)">Vypnout zásuvku 3 </button></p>
-        <p id="ID3"></p>
-        <p id="jmeno3"></p>
-        <p id="stav3"></p>
-        <p id="prikonW3"></p>
-        <p id="SpotrebaWh3"></p>
-        
-       
-        <h1>ZASUVKA4</h1>
-        <p id="ID4"></p>
-        <p id="jmeno4"></p>
-        <p id="stav4"></p>
-        <p id="prikonW4"></p>
-        <p id="SpotrebaWh4"></p>
-       
+            <p><button onclick="sendMessage(1,3)">Zapnout zásuvku 3</button></p>
+            <p><button onclick="sendMessage(0,3)">Vypnout zásuvku 3 </button></p>
+            <p id="ID3"></p>
+            <p id="jmeno3"></p>
+            <p id="stav3"></p>
+            <p id="prikonW3"></p>
+            <p id="SpotrebaWh3"></p>
+            </div>
+    
+            <div id="spodni-leva">
+            <h1>ZASUVKA4</h1>
+            <p id="ID4"></p>
+            <p id="jmeno4"></p>
+            <p id="stav4"></p>
+            <p id="prikonW4"></p>
+            <p id="SpotrebaWh4"></p>
+            </div>
+    </div>
         
     </section>
     <section id="senzory"><h1>Data PAPAGO </h1>
@@ -106,18 +115,25 @@
     </section>
 
    
+
+   
        
     
        
         
       
+    
+    <p><button onclick="nastavHodnotuVlhkosti('+')"> + </button></p>
+    <p id="display">50</p>
+    <p><button onclick="nastavHodnotuVlhkosti('-')"> - </button></p>
         
         
  
+        <script src="script.js"></script>
     
+    </body>
     
-    
-    
+    </html>
 
 
 

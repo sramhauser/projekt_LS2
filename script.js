@@ -30,8 +30,8 @@ function onConnectionLost(responseObject) {
 
 function onMessageArrived(message) {
 
-    console.log("onMessageArrived:" + message.destinationName);
-    console.log("onMessageArrived:" + message.payloadString);
+    //console.log("onMessageArrived:" + message.destinationName);
+    //console.log("onMessageArrived:" + message.payloadString);
     //document.getElementById("vlhkost").innerText = message.payloadString;
     
 
@@ -53,6 +53,7 @@ function onMessageArrived(message) {
 
         let vypisTeplB = document.querySelector("#teplotaB");
         vypisTeplB.textContent = obj.T2V1_value;
+
         
         automatOvladani(message);
            
@@ -121,16 +122,18 @@ function automatOvladani(message) {
 
     let obj = JSON.parse(message.payloadString);
 
-    let vlhkostJeCislo = Number(obj.H1V2_value)
-    console.log(vlhkostJeCislo)
+    let novaVlhkost = Number(obj.H1V2_value)
+    console.log(novaVlhkost)
 
-    document.getElementById("vlhkost").innerText = vlhkostJeCislo;
+    document.getElementById("vlhkost").innerText = novaVlhkost;
+    let vlhkostNastavenaUzivatelem = Number(document.getElementById("display").innerText)
+    
 
-    if(vlhkostJeCislo > 51){
+    if(novaVlhkost > vlhkostNastavenaUzivatelem){
         sendMessage(0, 2)
        // message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":0}]}");
         console.log("Vypnuto") 
-    }else if(vlhkostJeCislo <= 51){
+    }else if(novaVlhkost <= vlhkostNastavenaUzivatelem){
         sendMessage(1, 2)
         //message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":1}]}");
         console.log("Zapnuto") 
@@ -140,3 +143,18 @@ function automatOvladani(message) {
 
 }
 
+
+function nastavHodnotuVlhkosti(akce){
+   
+    let vlhkostNastavenaUzivatelem = Number(document.getElementById("display").innerText)
+
+    if(akce == "+"){
+        vlhkostNastavenaUzivatelem +=1
+    }else if(akce == "-"){
+        vlhkostNastavenaUzivatelem -=1
+    }else{
+        console.log("špatný parametr uzivatelskeho nastaveni kotle")
+    }
+
+    document.getElementById("display").innerText = vlhkostNastavenaUzivatelem;
+}
