@@ -2,5 +2,5 @@
 
 
 header -> hlavní nadpis, logo, navigace
-"zbytek body" → 
+"zbytek body" → rozdělit na sekce → 
 footer-> kdy jak proč vyrobeno
