@@ -8,6 +8,10 @@ body {
     /* jak nastavit, aby pozadí začínalo za headerem*/
 }
 
+#logo {
+    top: 90px;
+}
+
 h1 {
     text-align: center;
     font-size: 90px;
@@ -16,6 +20,7 @@ h1 {
 
 h2 {
     font-size: 30pt;
+    color: rgb(28, 56, 0);
 }
 
 h3 {
@@ -186,9 +191,10 @@ footer {
 #teplotaA {}
 
 button {
-    background-color: rgb(188, 188, 188);
+    background-color: rgb(139, 211, 73);
     color: rgb(0, 0, 0);
     font-family: 'PT Sans', sans-serif;
+    border: 3px solid rgb(28, 56, 0);
 }
 
 #zasuvka1 {
@@ -214,7 +220,21 @@ button {
 #zasuvka2 {
     position: absolute;
     top: 1450px;
-    left: 700px;
+    left: 715px;
+}
+
+#tlacitkoZ2 {
+    position: absolute;
+    top: 1538px;
+    left: 690px;
+    border-radius: 5px;
+}
+
+#tlacitkoV2 {
+    position: absolute;
+    top: 1538px;
+    left: 795px;
+    border-radius: 5px;
 }
 
 
@@ -239,7 +259,7 @@ button {
 #zasuvka4 {
     position: absolute;
     top: 1990px;
-    left: 700px;
+    left: 715px;
 }
 
 #horni-prava button,
