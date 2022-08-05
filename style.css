@@ -95,3 +95,7 @@ header {
     font-size: 20pt;
     text-align: justify;
 }
+
+html {
+    scroll-behavior: smooth;
+}
