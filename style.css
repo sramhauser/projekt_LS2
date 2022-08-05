@@ -14,10 +14,14 @@ h2 {
     padding-left: 100px;
 }
 
+h3{
+    font-size: 25pt;
+}
+
 #ovladani {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
 }
 
@@ -79,6 +83,7 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     place-content: center;
+    vertical-align: bottom;
 }
 
 .UvodDiv {
