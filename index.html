@@ -30,14 +30,16 @@
 
     <section id="uvodInfo">
         <h2>ÚVOD</h2>
-        <div class="UvodDiv">
+        <div class="TextDiv">
             <p> Tato webová stránka vznikla jako týdenní projekt na IT Letní Škole pořádané Czechitas. Náš tým hned
-                první den dostal zadání pojmenované "Topení na chatě". Jako jediní máme možnost pracovat s průmyslovým
-                hardwarem. Jedná se o dva senzory měřící teplotu, vlhkost vzduchu a jeho rosný bod. Také zásuvky netio,
-                které dokážeme ovládat na dálku. </p>
-            <p>Na nášem webu tato zařízení zobrazují svůj aktuální stav. Pomocí tlačítek je je možné ovládat, u námi
-                přednastavené zásuvky je tato činnost automatická. Vše jsme nastavili tak, aby si uživatel mohl
-                nastavení zapnutí přístroje, zapojeného v zásuvkách, sám vybrat.</p>
+                první den dostal zadání "Topení na chatě". Po chvíli přemýšlení jsme se rozhodli pro více obecné řešení
+                a využít "většího potenciálu" projektu. Rozšířit původní myšlenku z vytápěné chaty i do běžné
+                domácnosti. </p>
+            <p>Jako jediní máme možnost pracovat s průmyslovým hardwarem. Jedná se o dva senzory měřící teplotu, vlhkost
+                vzduchu a jeho rosný bod. Také zásuvky netio, které dokážeme ovládat na dálku. Na našem webu tato
+                zařízení zobrazují svůj aktuální stav. Pomocí tlačítek je je možné ovládat, u námi přednastavené zásuvky
+                je tato činnost automatická. Vše jsme nastavili tak, aby si uživatel mohl nastavení zapnutí přístroje,
+                zapojeného v zásuvkách, sám vybrat.</p>
     </section>
     </div>
 
@@ -100,25 +102,37 @@
         <p id="rosnyBod"></p>
         <p id="teplotaB"></p>
     </section>
-    <section id="oNas"></section>
+    <section id="oNas">
+        <div class="TextDiv">
+            <p> Ahoj,<br>
+
+                jsme čtyřlenný tým, od vysokoškolačky, které tento projekt pomůže v chystané diplomové práci, po
+                středoškoláky studující všeobecná gymnázium či grafický design. Všechny nás dohromady spojila IT Letní
+                Škola
+                s touhou naučit se něco nového. Během ní jsme si všichni vybrali tento projekt a Vy jste právě viděli
+                výsledek.</p>
+            <p>Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému
+                jsme
+                se naučili něco nového a to vše jsme byli schopni použít v tomto projektu. <br> Děkujeme!!! </p>
+            <!--(přidat logo czechitas????????) nejakou fotku?????????-->
+        </div>
+    </section>
 
 
-    <p><button onclick="nastavHodnotuVlhkosti('+')"> + </button></p>
-    <p id="display">50</p>
-    <p><button onclick="nastavHodnotuVlhkosti('-')"> - </button></p>
+    <section class="autoTlacitka">
+        <button onclick="nastavHodnotuVlhkosti('+')"> + </button>
+        <p id="display">50</p>
+        <button onclick="nastavHodnotuVlhkosti('-')"> - </button>
+
+    </section>
 
 
 
     <script src="script.js"></script>
 
 
-    <br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
     <footer>
-        Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému jsme se
-        naučili něco nového a to vše jsme byli schopni použít v tomto projektu. <br> Děkujeme!!!
+        © 2022, CLEVERLET
     </footer>
     <script src="script.js"></script>
 </body>
