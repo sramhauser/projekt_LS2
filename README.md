@@ -39,7 +39,7 @@ footer:  © 2022, CLEVERLET
 
 prezentace:
 
-    1) úvodní slide (hlavně se trapně nepředstavovat)
+    1) úvodní slide (hlavně se trapně nepředstavovat) PŘIJÍT S NĚJAKOU OTÁZKOU, NA NI BĚHEM ŘEŠENÍ ODPOVĚDĚT
     2) problém
         → jak vytápět chatu -> přesunutí se k obecnější myšlence
         → 
