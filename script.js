@@ -56,6 +56,12 @@ function onMessageArrived(message) {
 
         
         automatOvladani(message);
+        dataPapagoTeplA.push(Number(obj.T1V1_value));
+        dataPapagoVlh.push(Number(obj.H1V2_value));
+        dataPapagoRos.push(Number(obj.D1V3_value));
+        dataPapagoTeplB.push(Number(obj.T1V1_value));
+        dataPapagoPrumerTeplot.push((Number(obj.T1V1_value)+Number(obj.T1V1_value))/2)
+        myChart.update();
            
     }
 
@@ -130,13 +136,13 @@ function automatOvladani(message) {
     
 
     if(novaVlhkost > vlhkostNastavenaUzivatelem){
-        sendMessage(0, 2)
+        sendMessage(1, 4)
        // message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":0}]}");
-        console.log("Vypnuto") 
-    }else if(novaVlhkost <= vlhkostNastavenaUzivatelem){
-        sendMessage(1, 2)
-        //message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":1}]}");
         console.log("Zapnuto") 
+    }else if(novaVlhkost <= vlhkostNastavenaUzivatelem){
+        sendMessage(0, 4)
+        //message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":1}]}");
+        console.log("Vypnuto") 
     }else{
         console.log("špatný parametr automatick0ho vyhodnocovani")
     }
@@ -158,3 +164,107 @@ function nastavHodnotuVlhkosti(akce){
 
     document.getElementById("display").innerText = vlhkostNastavenaUzivatelem;
 }
+
+
+//nastavení grafu teplota a vlhkost
+dataPapagoTeplA= [];
+
+dataPapagoVlh= [];
+
+dataPapagoRos= [];
+
+dataPapagoTeplB= [];
+
+dataPapagoPrumerTeplot = [];
+
+
+function numbers(config) {
+    return [1 , 5, 6, 88, 68, 56]
+
+  }
+  
+ const CHART_COLORS = {
+    red: 'rgb(255, 99, 132)',
+    orange: 'rgb(255, 159, 64)',
+    yellow: 'rgb(255, 205, 86)',
+    green: 'rgb(75, 192, 192)',
+    blue: 'rgb(54, 162, 235)',
+    purple: 'rgb(153, 102, 255)',
+    grey: 'rgb(201, 203, 207)'
+  };
+  
+  const NAMED_COLORS = [
+    CHART_COLORS.red,
+    CHART_COLORS.orange,
+    CHART_COLORS.yellow,
+    CHART_COLORS.green,
+    CHART_COLORS.blue,
+    CHART_COLORS.purple,
+    CHART_COLORS.grey,
+  ];
+
+const DATA_COUNT = 7;
+const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
+
+const labels = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Průměrná teplota [°C]',
+      data: dataPapagoPrumerTeplot,
+      borderColor: CHART_COLORS.red,
+      yAxisID: 'y',
+    },
+    {
+      label: 'Vzdušná vlhkost [%]',
+      data: dataPapagoVlh,
+      borderColor: CHART_COLORS.blue,
+      yAxisID: 'y1',
+    }
+  ]
+};
+
+
+
+const config = {
+  type: 'line',
+  data:  data,
+  options: {
+    responsive: true,
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    stacked: false,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Chart.js Line Chart - Multi Axis'
+      }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+
+        // grid line settings
+        grid: {
+          drawOnChartArea: false, // only want the grid lines for one axis to show up
+        },
+      },
+    }
+  },
+};
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, config)
+
+//konec nastavení grafu teplota a vlhkost
+
