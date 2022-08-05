@@ -1,36 +1,59 @@
-h1, h2, p {
+html {
+    scroll-behavior: smooth;
+    }
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-image: url("obrazky/backgroundV2.png");
+    /* jak nastavit, aby pozadí začínalo za headerem*/
+}
+
+h1 {
     text-align: center;
+    font-size: 90px;
+
 }
 
-#ovladani{
-    display : grid;
+h2 {
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 25pt;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-content: center;
+    vertical-align: bottom;
+}
+
+#ovladani {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
 }
 
-#horni-prava{
+#horni-prava {
     grid-column: 3;
     grid-row: 1
 }
 
-#horni-leva{
+#horni-leva {
     grid-column: 4;
     grid-row: 1
 }
 
-#spodni-prava{
+#spodni-prava {
     grid-column: 3;
     grid-row: 2
 }
 
-#spodni-leva{
+#spodni-leva {
     grid-column: 4;
     grid-row: 2
-}
-
-footer{
-    background-color: blueviolet;
 }
 
 #menu {
@@ -43,7 +66,7 @@ footer{
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: green;
+    background-color: rgb(89, 155, 27);
 }
 
 #menu li {
@@ -51,18 +74,41 @@ footer{
 }
 
 #menu a {
-    color: black;
+    color: rgb(28, 56, 0);
     text-decoration: none;
     display: inline-block;
     padding: 20px 30px;
 }
 
-#menu a:hover, #menu a:focus, #menu a:active {
+#menu a:hover,
+#menu a:focus,
+#menu a:active {
     background-color: beige;
 }
 
-header {
-    display: grid;
-    grid-template-columns: auto auto;
-    place-content: center;
+.uvodInfoDiv,
+.oNasDiv {
+    height: 500px;
+    width: 750px;
+    /*background-color: aqua;*/
+    /* barva nemusí být vidět, jen pro "zarámování textu"*/
+    padding-left: 100px;
+    font-size: 20pt;
+    text-align: justify;
+}
+
+.oNasDiv {
+    position: absolute;
+    top: 2700px
+        /* <-- this is what I added */
+}
+
+footer {
+    color: whitesmoke;
+    background-color: rgb(28, 56, 0);
+    /*možná černá?????*/
+    position: absolute;
+    top: 4000px;
+    width: 100%;
+    left: 0;
 }

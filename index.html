@@ -11,28 +11,38 @@
 
 <body>
     <header>
-        <img src="obrazky/logo.png" alt="logo" height="200px">
-        <h1>TOPENÍ NEJEN NA CHATĚ</h1>
+        <img src="obrazky/logo.png" alt="logo" height="150px">
+
+        <h1>CLEVLET</h1>
     </header>
-    
-    
+
+
 
     <nav id="menu">
         <ul>
-        <a href="#uvodInfo">Úvodní informace</a>
-        <a href="#zasuvky">Přehled zásuvek</a> 
-        <a href="#senzory">Senzory</a>
-        <a href="#oNasAProjekt">O projektu a o nás</a>
+            <a href="#uvodInfo">Informace o projektu</a>
+            <a href="#zasuvky">Přehled zásuvek</a>
+            <a href="#senzory">Senzory</a>
+            <a href="#oNas">O nás</a>
         </ul>
     </nav>
-    
-    
-    <section id="uvodInfo"> res rem id. Inventore maxime ex assumenda dicta, voluptatum ea itaque recusandae, ullam mollitia, doloremque quo blanditiis accusamus!
-    Voluptatum molestias commodi excepturi quo aperiam, consectetur reiciendis aspernatur cupiditate perspiciatis quos. Dignissimos officiis accusamus eum hic nihil, praesentium cum pariatur a amet voluptatibus exercitationem natus, beatae maiores quo accusantium?
-    Incidunt nostrum voluptatem magnam quas non. Neque adipisci, veritatis velit ab quibusdam doloremque nihil dicta ratione vitae, maiores voluptas sequi corporis repellendus cupiditate nesciunt exercitationem dolores. Provident, nobis? Illo, dolorem?
-    Eligendi nostrum inventore, excepturi cum, odit nulla aliquam reprehenderit at dicta fugiat, consectetur distinctio harum error. Maxime, ipsam, delectus a cum sit ullam magni iusto ab quas maiores ducimus ex.
-    Voluptatem nemo vitae autem doloremque mollitia adipisci nobis a, qui dolore dolores iure explicabo ea molestias eius rerum repellendus voluptas. Dolorem error facere nobis ducimus! Maiores facilis eos quae amet!
-    Dolorum quae repudiandae laborum sint optio vel tempora? Repellendus eligendi quisquam alias cum nesciunt est necessitatibus, porro deserunt nihil consequatur enim nostrum natus culpa, sit suscipit in aspernatur recusandae ut.</section>
+
+
+    <section id="uvodInfo">
+        <div class="uvodInfoDiv">
+            <h2>ÚVOD</h2>
+            <p> Tato webová stránka vznikla jako týdenní projekt na IT Letní Škole pořádané Czechitas. Náš tým hned
+                první den dostal zadání "Topení na chatě". Po chvíli přemýšlení jsme se rozhodli pro více obecné řešení
+                a využít "většího potenciálu" projektu. Rozšířit původní myšlenku z vytápěné chaty i do běžné
+                domácnosti. </p>
+            <p>Jako jediní máme možnost pracovat s průmyslovým hardwarem. Jedná se o dva senzory měřící teplotu, vlhkost
+                vzduchu a jeho rosný bod. Také zásuvky netio, které dokážeme ovládat na dálku. Na našem webu tato
+                zařízení zobrazují svůj aktuální stav. Pomocí tlačítek je je možné ovládat, u námi přednastavené zásuvky
+                je tato činnost automatická. Vše jsme nastavili tak, aby si uživatel mohl nastavení zapnutí přístroje,
+                zapojeného v zásuvkách, sám vybrat.</p>
+    </section>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
    
@@ -45,106 +55,92 @@
     <!--graf-->
 
     <section id="zasuvky">
-    <div id="ovladani">
+        <div id="ovladani">
 
-        <div id="horni-prava">   
-        <h1>ZASUVKA1</h1>
-            <p><button onclick="sendMessage(1,1)">Zapnout zásuvku 1</button></p>
-            <p><button onclick="sendMessage(0,1)">Vypnout zásuvku 1 </button></p>
-            <p id="ID1"></p>
-            <p id="jmeno1"></p>
-            <p id="stav1"></p>
-            <p id="prikonW1"></p>
-            <p id="SpotrebaWh1"></p>
-        </div>
-       
-        <div id="horni-leva">        
-                <h1>ZASUVKA2</h1>
-            <p><button onclick="sendMessage(1,2)">Zapnout zásuvku 2</button></p>
-            <p><button onclick="sendMessage(0,2)">Vypnout zásuvku 2 </button></p>           
-            <p id="ID2"></p>
-            <p id="jmeno2"></p>
-            <p id="stav2"></p>
-            <p id="prikonW2"></p>
-            <p id="SpotrebaWh2"></p>
+            <div id="horni-prava">
+                <h3>ZÁSUVKA 1</h3>
+                <p><button onclick="sendMessage(1,1)">Zapnout zásuvku 1</button></p>
+                <p><button onclick="sendMessage(0,1)">Vypnout zásuvku 1 </button></p>
+                <p id="ID1"></p>
+                <p id="jmeno1"></p>
+                <p id="stav1"></p>
+                <p id="prikonW1"></p>
+                <p id="SpotrebaWh1"></p>
             </div>
-            
-    
-        <div id="spodni-prava">
-        <h1>ZASUVKA3</h1>
-            <p><button onclick="sendMessage(1,3)">Zapnout zásuvku 3</button></p>
-            <p><button onclick="sendMessage(0,3)">Vypnout zásuvku 3 </button></p>
-            <p id="ID3"></p>
-            <p id="jmeno3"></p>
-            <p id="stav3"></p>
-            <p id="prikonW3"></p>
-            <p id="SpotrebaWh3"></p>
+
+            <div id="horni-leva">
+                <h3>ZÁSUVKA 2</h3>
+                <p><button onclick="sendMessage(1,2)">Zapnout zásuvku 2</button></p>
+                <p><button onclick="sendMessage(0,2)">Vypnout zásuvku 2 </button></p>
+                <p id="ID2"></p>
+                <p id="jmeno2"></p>
+                <p id="stav2"></p>
+                <p id="prikonW2"></p>
+                <p id="SpotrebaWh2"></p>
             </div>
-    
+
+
+            <div id="spodni-prava">
+                <h3>ZÁSUVKA 3</h3>
+                <p><button onclick="sendMessage(1,3)">Zapnout zásuvku 3</button></p>
+                <p><button onclick="sendMessage(0,3)">Vypnout zásuvku 3 </button></p>
+                <p id="ID3"></p>
+                <p id="jmeno3"></p>
+                <p id="stav3"></p>
+                <p id="prikonW3"></p>
+                <p id="SpotrebaWh3"></p>
+            </div>
+
             <div id="spodni-leva">
-            <h1>ZASUVKA4</h1>
-            <p id="ID4"></p>
-            <p id="jmeno4"></p>
-            <p id="stav4"></p>
-            <p id="prikonW4"></p>
-            <p id="SpotrebaWh4"></p>
+                <h3>ZASUVKA 4</h3>
+                <p id="ID4"></p>
+                <p id="jmeno4"></p>
+                <p id="stav4"></p>
+                <p id="prikonW4"></p>
+                <p id="SpotrebaWh4"></p>
             </div>
-    </div>
-        
+        </div>
+
     </section>
-    <section id="senzory"><h1>Data PAPAGO </h1>
+    <section id="senzory">
+        <h3>Data PAPAGO </h3>
         <p id="typ"></p>
         <p id="teplotaA"></p>
         <p id="vlhkost"></p>
         <p id="rosnyBod"></p>
         <p id="teplotaB"></p>
     </section>
+    <section id="oNas">
+        <div class="oNasDiv">
+            <h2>O NÁS</h2>
+            <p> Ahoj,<br>
 
-
-
-    <section id="oNasAProjekt">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptate expedita repudiandae reprehenderit beatae est alias, voluptatem possimus nihil ipsam voluptatum officiis accusantium quia maiores ab rerum! Eaque, beatae hic!
-        Facilis in earum sed tenetur, dolor quae voluptatum harum perspiciatis assumenda at! Deleniti accusantium nam facere unde blanditiis eaque quibusdam accusamus, modi consequatur aliquam voluptatum ea at magnam nostrum nihil.
-        Accusamus excepturi assumenda distinctio magnam mollitia, minus labore optio eius ea necessitatibus itaque corporis aliquid dolor nobis nesciunt possimus culpa quidem. Laboriosam nostrum magni, recusandae animi ipsum dolor magnam quasi.
-        Ad fuga quisquam, at est dolorum sequi voluptatem nam exercitationem dicta adipisci a quam dolorem eum, quibusdam ea, quis sit alias eveniet repellat. Consequuntur nulla est totam beatae itaque assumenda?
-        Totam quod nemo soluta a ratione fugit odit, qui dolor at commodi perferendis. Rerum eveniet assumenda facere saepe corporis asperiores quisquam quo fugiat, sint ab atque consequuntur maxime, obcaecati earum!
-        Pariatur nam, fugit nesciunt veritatis voluptatem laborum officiis eum dignissimos omnis? Aliquam quas, sequi sunt doloremque architecto officia aliquid sint nemo autem, hic quod facere. Rem, ea nostrum? Voluptatum, sapiente?
-        Possimus quidem inventore ducimus obcaecati consequatur distinctio omnis quo, in vel? Error, asperiores non illum sapiente fugiat iste eos quisquam tenetur nobis, excepturi quis consequatur voluptates dolore aperiam libero dolorem?
-        Deserunt, eum sapiente dolore expedita obcaecati quos laboriosam placeat, aperiam vel cupiditate perspiciatis dignissimos, harum sunt quo ratione praesentium? Odio eveniet aliquam, recusandae consectetur corrupti omnis nemo? Nihil, commodi soluta.
-        Sit soluta laboriosam animi laudantium! Autem dolore sequi delectus sed, blanditiis magni exercitationem in nemo incidunt ullam? Ipsa similique officia, voluptate porro laboriosam minus omnis dolorem placeat, sequi veritatis repellat.
-        Quia eligendi tenetur ut sequi voluptates qui ipsum porro architecto facere, esse possimus! Deleniti iusto nesciunt debitis eveniet, laborum adipisci vero facilis ea explicabo non, ullam nisi quasi quos ex!
-        Autem, quos nihil consectetur non officiis accusantium incidunt omnis veniam at nesciunt, molestias perspiciatis possimus ad magni ipsam aspernatur id! Fugit dolorum exercitationem corrupti repellendus temporibus vel quas expedita dolor.
-        Illo repellendus unde quos itaque corrupti, totam, porro ipsam laudantium fugiat natus culpa eligendi quas aut sunt perferendis architecto eaque tempore blanditiis quam? Maiores architecto expedita ullam dignissimos provident deserunt.
-        Fugit quam labore et molestiae velit sit repellat autem minus ipsum vitae quis reiciendis maiores quas itaque, officia exercitationem dolores beatae debitis esse? Eligendi obcaecati deserunt animi dignissimos facere blanditiis.
-        Laborum aspernatur quod tempore iusto voluptates libero cupiditate illum impedit itaque quidem sapiente, voluptatum assumenda qui praesentium dolor nulla error minima! Provident, fugit ipsa! Illo nihil ut dignissimos placeat recusandae?
-        Ex sed atque laborum distinctio aliquam quam deserunt eligendi mollitia praesentium, assumenda voluptas inventore debitis aut velit fuga rerum ut quas quis sequi nostrum. Voluptatibus amet eos quis nemo. Ipsam!
-        Qui exercitationem, et voluptatum in rerum, harum aliquam saepe neque ipsam, minima commodi tempora velit iure necessitatibus repellendus? Ratione quibusdam tempore magni officiis tenetur voluptatem eveniet id delectus nesciunt error.
-        Quo delectus laboriosam veritatis cum alias ea atque odio nisi quos sunt, possimus, sed quisquam incidunt eum magni nesciunt voluptatibus pariatur ipsam ducimus omnis, earum perferendis magnam tenetur provident? Adipisci.
-        Ex sint tempore nobis totam beatae dolor velit laborum labore praesentium at? Quod alias assumenda totam nobis atque velit repellat, explicabo possimus autem nemo suscipit nihil molestias distinctio quis enim.
-        Voluptas quia corporis, perferendis ea eum minus? Atque itaque voluptatibus accusamus tenetur nulla placeat adipisci magni cum, quidem tempore ducimus cupiditate ipsa possimus fuga amet quos voluptatum nobis, culpa vitae?
-        Suscipit, iure? Perspiciatis, sequi fuga voluptatem excepturi unde sapiente. Consectetur eos, quibusdam corporis perferendis nam sit vero, aspernatur consequuntur doloribus necessitatibus repellendus a illo quo voluptates ipsam quis aperiam. Explicabo.
+                jsme čtyřlenný tým, od vysokoškolačky, které tento projekt pomůže v chystané diplomové práci, po
+                středoškoláky studující všeobecná gymnázium či grafický design. Všechny nás dohromady spojila IT Letní
+                Škola
+                s touhou naučit se něco nového. Během ní jsme si všichni vybrali tento projekt a Vy jste právě viděli
+                výsledek.</p>
+            <p>Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému
+                jsme
+                se naučili něco nového a to vše jsme byli schopni použít v tomto projektu. <br> Děkujeme!!! </p>
+            <!--(přidat logo czechitas????????) nejakou fotku?????????-->
+        </div>
     </section>
 
-   
 
-   
-       
-    
-       
-        
-      
-    
-    <p><button onclick="nastavHodnotuVlhkosti('+')"> + </button></p>
-    <p id="display">50</p>
-    <p><button onclick="nastavHodnotuVlhkosti('-')"> - </button></p>
-        
+    <section class="autoTlacitka">
+        <button onclick="nastavHodnotuVlhkosti('+')"> + </button>
+        <span id="display">50</span>
+        <button onclick="nastavHodnotuVlhkosti('-')"> - </button>
+    </section>
 
 
 
+    <script src="script.js"></script>
 
 
     <footer>
-        Tento projekt vznikl v rámci Letní Školy 2, pořádané Czechitas. Moc Vám děkujeme!!!
+        © 2022, CLEVERLET
     </footer>
     <script src="script.js"></script>
 </body>
