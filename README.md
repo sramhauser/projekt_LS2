@@ -29,4 +29,23 @@ jsme čtyřlenný tým, od vysokoškolačky, které tento projekt pomůže v chy
 <p>Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému jsme se naučili něco nového a to vše jsme byli schopni použít v tomto projektu.  <br> Děkujeme!!! </p>
 (přidat logo czechitas????????) nejakou fotku?????????
 
+
+
+je nutné udržovat relativní vlhkost ve správné hodnotě, ta je v zimních měsících 45 až 65 %, letním pak od 40 do 55%.
+
+
 footer:  © 2022, CLEVERLET
+
+
+prezentace:
+
+    1) úvodní slide (hlavně se trapně nepředstavovat)
+    2) problém
+        → jak vytápět chatu -> přesunutí se k obecnější myšlence
+        → 
+        → "no a pak tu byl vývojářský problém jak tu zásuvku na dálku zapínat a vypínat a případně ji donutit, aby to dělala sama"
+    3) naše řešení
+        → javascript, MQTT, naše znalosti 
+        → jsme si schopni na dálku zapnou např. vytápění na chatě, pracovat s okny -> otevřít je při vlhkosti nebo zatáhnout/roztáhnout roletu
+        
+    4) rozkliknutí na webovou stránku
