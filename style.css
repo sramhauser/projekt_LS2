@@ -99,7 +99,7 @@ header {
 
 .oNasDiv {
     position: absolute;
-    top: 2700px
+    top: 3700px
         /* <-- this is what I added */
 }
 
@@ -126,6 +126,24 @@ footer {
 #druhaZasuvkaV {
     position: absolute;
     top: 1630px;
+    width: 250px;
+    height: 250px;
+    left: 658px;
+}
+
+#tretiZasuvkaV,
+#tretiZasuvkaZ {
+    position: absolute;
+    top: 2168px;
+    width: 250px;
+    height: 250px;
+    left: 450px;
+}
+
+#ctvrtaZasuvkaV,
+#ctvrtaZasuvkaZ {
+    position: absolute;
+    top: 2168px;
     width: 250px;
     height: 250px;
     left: 658px;
