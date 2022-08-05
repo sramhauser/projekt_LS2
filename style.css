@@ -27,6 +27,7 @@ header {
     grid-template-columns: auto auto;
     place-content: center;
     vertical-align: bottom;
+    background-color: rgb(139,211,73);
 }
 
 #ovladani {
@@ -161,5 +162,14 @@ footer {
     position: absolute;
     top: 2000px;
     left: 1100px;
-    width: ;
+}
+
+.SenzoryGrid{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+#teplotaA{
+    
 }
