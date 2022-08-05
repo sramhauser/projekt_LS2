@@ -16,7 +16,6 @@ h1 {
 
 h2 {
     font-size: 30pt;
-    padding-left: 100px;
 }
 
 h3 {
@@ -87,18 +86,29 @@ header {
     background-color: beige;
 }
 
-.TextDiv {
+.uvodInfoDiv,
+.oNasDiv {
     height: 500px;
     width: 750px;
-    background-color: aqua;
+    /*background-color: aqua;*/
     /* barva nemusí být vidět, jen pro "zarámování textu"*/
     padding-left: 100px;
     font-size: 20pt;
     text-align: justify;
 }
 
+.oNasDiv {
+    position: absolute;
+    top: 2700px
+        /* <-- this is what I added */
+}
+
 footer {
     color: whitesmoke;
     background-color: rgb(28, 56, 0);
     /*možná černá?????*/
+    position: absolute;
+    top: 4000px;
+    width: 100%;
+    left: 0;
 }
