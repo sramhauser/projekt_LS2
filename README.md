@@ -17,9 +17,11 @@ barvy:
 <p> Tato webová stránka vznikla jako týdenní projekt na IT Letní Škole pořádané Czechitas. Náš tým hned první den dostal zadání pojmenované "Topení na chatě". Jako jediní máme možnost pracovat s průmyslovým hardwarem. Jedná se o dva senzory měřící teplotu, vlhkost vzduchu a jeho rosný bod. Také zásuvky netio, které dokážeme ovládat na dálku. </p>
 <p>Na nášem webu tato zařízení zobrazují svůj aktuální stav. Pomocí tlačítek je je možné ovládat, u námi přednastavené zásuvky je tato činnost automatická. Vše jsme nastavili tak, aby si uživatel mohl nastavení zapnutí přístroje, zapojeného v zásuvkách, sám vybrat.</p>
 
-<p> </p>
+<p> Ahoj,<br>
 
+jsme čtyřlenný tým, od vysokoškolačky, které tento projekt pomůže v chystané diplomové práci, po středoškoláky studující grafický design či všeobecná gymnázia. Všechny nás dohromady spojila IT Letní Škola a touha naučit se něco nového.</p>
 
-
-Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému jsme se naučili něco nového a to vše jsme byli schopni použít v tomto projektu.  (odsadit, styl"dopis") Děkujeme!!!
+<p>Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému jsme se naučili něco nového a to vše jsme byli schopni použít v tomto projektu.  <br> Děkujeme!!! </p>
 (přidat logo czechitas????????) nejakou fotku?????????
+
+footer:  © 2022, CLEVERLET
