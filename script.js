@@ -39,8 +39,8 @@ function onMessageArrived(message) {
 
     if ("devices/papago/" === message.destinationName) {
 
-        let vypisTyp = document.querySelector("#typ");
-        vypisTyp.textContent = obj.type;
+        //let vypisTyp = document.querySelector("#typ");
+        //vypisTyp.textContent = obj.type;
 
         let vypisTeplA = document.querySelector("#teplotaA");
         vypisTeplA.textContent = obj.T1V1_value;
