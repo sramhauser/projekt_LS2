@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    }
+}
 
 body {
     font-family: 'PT Sans', sans-serif;
@@ -111,4 +111,22 @@ footer {
     top: 4000px;
     width: 100%;
     left: 0;
+}
+
+#prvniZasuvkaV,
+#prvniZasuvkaZ {
+    position: absolute;
+    top: 1630px;
+    width: 250px;
+    height: 250px;
+    left: 450px;
+}
+
+#druhaZasuvkaZ,
+#druhaZasuvkaV {
+    position: absolute;
+    top: 1630px;
+    width: 250px;
+    height: 250px;
+    left: 658px;
 }
