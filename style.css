@@ -27,7 +27,7 @@ header {
     grid-template-columns: auto auto;
     place-content: center;
     vertical-align: bottom;
-    background-color: rgb(139,211,73);
+    background-color: rgb(139, 211, 73);
 }
 
 #ovladani {
@@ -84,7 +84,7 @@ header {
 #menu a:hover,
 #menu a:focus,
 #menu a:active {
-    background-color: beige;
+    background-color: rgb(139, 211, 73);
 }
 
 .uvodInfoDiv,
@@ -164,12 +164,87 @@ footer {
     left: 1100px;
 }
 
-.SenzoryGrid{
-    background-color: aqua;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
+.autoTlacitka button {
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    border: 3px solid rgb(28, 56, 0);
+    border-radius: 4px;
+    text-align: center;
 }
 
-#teplotaA{
-    
+#display {
+    font-size: 60px;
+}
+
+.SenzoryGrid {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#teplotaA {}
+
+button {
+    background-color: rgb(188, 188, 188);
+    color: rgb(0, 0, 0);
+    font-family: 'PT Sans', sans-serif;
+}
+
+#zasuvka1 {
+    position: absolute;
+    top: 1450px;
+    left: 490px;
+}
+
+#tlacitkoZ1 {
+    position: absolute;
+    top: 1538px;
+    left: 460px;
+    border-radius: 5px;
+}
+
+#tlacitkoV1 {
+    position: absolute;
+    top: 1538px;
+    left: 565px;
+    border-radius: 5px;
+}
+
+#zasuvka2 {
+    position: absolute;
+    top: 1450px;
+    left: 700px;
+}
+
+
+#zasuvka3 {
+    position: absolute;
+    top: 1990px;
+    left: 490px;
+}
+
+#tlacitkoZ3 {
+    position: absolute;
+    top: 2075px;
+    left: 460px;
+}
+
+#tlacitkoV3 {
+    position: absolute;
+    top: 2075px;
+    left: 565px;
+}
+
+#zasuvka4 {
+    position: absolute;
+    top: 1990px;
+    left: 700px;
+}
+
+#horni-prava button,
+#horni-leva button,
+#spodni-prava button {
+    font-size: 20px;
+    font-family: 'PT Sans', sans-serif;
 }
