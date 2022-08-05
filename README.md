@@ -42,9 +42,10 @@ prezentace:
 
     1) úvodní slide (hlavně se trapně nepředstavovat) PŘIJÍT S NĚJAKOU OTÁZKOU, NA NI BĚHEM ŘEŠENÍ ODPOVĚDĚT
     2) problém
-        → jak vytápět chatu -> přesunutí se k obecnější myšlence
-        → 
+        → JAK VYTÁPĚT CHATU NA DÁLKU? 
+        →
         → "no a pak tu byl vývojářský problém jak tu zásuvku na dálku zapínat a vypínat a případně ji donutit, aby to dělala sama"
+    
     3) naše řešení
         → javascript, MQTT, naše znalosti 
         → jsme si schopni na dálku zapnou např. vytápění na chatě, pracovat s okny -> otevřít je při vlhkosti nebo zatáhnout/roztáhnout roletu
