@@ -12,108 +12,127 @@
 <body>
     <header>
         <img src="obrazky/logo.png" alt="logo" height="150px">
-        
+
         <h1>CLEVLET</h1>
     </header>
-    
-    
+
+
 
     <nav id="menu">
         <ul>
-        <a href="#uvodInfo">Informace o projektu</a>
-        <a href="#zasuvky">Přehled zásuvek</a> 
-        <a href="#senzory">Senzory</a>
-        <a href="#oNas">O nás</a>
+            <a href="#uvodInfo">Informace o projektu</a>
+            <a href="#zasuvky">Přehled zásuvek</a>
+            <a href="#senzory">Senzory</a>
+            <a href="#oNas">O nás</a>
         </ul>
     </nav>
-    
-    
-    <section id="uvodInfo"> 
+
+
+    <section id="uvodInfo">
         <h2>ÚVOD</h2>
-        <div class="UvodDiv">
-            <p> Tato webová stránka vznikla jako týdenní projekt na IT Letní Škole pořádané Czechitas. Náš tým hned první den dostal zadání pojmenované "Topení na chatě". Jako jediní máme možnost pracovat s průmyslovým hardwarem. Jedná se o dva senzory měřící teplotu, vlhkost vzduchu a jeho rosný bod. Také zásuvky netio, které dokážeme ovládat na dálku. </p>
-            <p>Na nášem webu tato zařízení zobrazují svůj aktuální stav. Pomocí tlačítek je je možné ovládat, u námi přednastavené zásuvky je tato činnost automatická. Vše jsme nastavili tak, aby si uživatel mohl nastavení zapnutí přístroje, zapojeného v zásuvkách, sám vybrat.</p></section>
-        </div>
+        <div class="TextDiv">
+            <p> Tato webová stránka vznikla jako týdenní projekt na IT Letní Škole pořádané Czechitas. Náš tým hned
+                první den dostal zadání "Topení na chatě". Po chvíli přemýšlení jsme se rozhodli pro více obecné řešení
+                a využít "většího potenciálu" projektu. Rozšířit původní myšlenku z vytápěné chaty i do běžné
+                domácnosti. </p>
+            <p>Jako jediní máme možnost pracovat s průmyslovým hardwarem. Jedná se o dva senzory měřící teplotu, vlhkost
+                vzduchu a jeho rosný bod. Také zásuvky netio, které dokážeme ovládat na dálku. Na našem webu tato
+                zařízení zobrazují svůj aktuální stav. Pomocí tlačítek je je možné ovládat, u námi přednastavené zásuvky
+                je tato činnost automatická. Vše jsme nastavili tak, aby si uživatel mohl nastavení zapnutí přístroje,
+                zapojeného v zásuvkách, sám vybrat.</p>
+    </section>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
 
     <section id="zasuvky">
-    <div id="ovladani">
+        <div id="ovladani">
 
-        <div id="horni-prava">   
-        <h3>ZÁSUVKA 1</h3>
-            <p><button onclick="sendMessage(1,1)">Zapnout zásuvku 1</button></p>
-            <p><button onclick="sendMessage(0,1)">Vypnout zásuvku 1 </button></p>
-            <p id="ID1"></p>
-            <p id="jmeno1"></p>
-            <p id="stav1"></p>
-            <p id="prikonW1"></p>
-            <p id="SpotrebaWh1"></p>
-        </div>
-       
-        <div id="horni-leva">        
-            <h3>ZÁSUVKA 2</h3>
-            <p><button onclick="sendMessage(1,2)">Zapnout zásuvku 2</button></p>
-            <p><button onclick="sendMessage(0,2)">Vypnout zásuvku 2 </button></p>           
-            <p id="ID2"></p>
-            <p id="jmeno2"></p>
-            <p id="stav2"></p>
-            <p id="prikonW2"></p>
-            <p id="SpotrebaWh2"></p>
+            <div id="horni-prava">
+                <h3>ZÁSUVKA 1</h3>
+                <p><button onclick="sendMessage(1,1)">Zapnout zásuvku 1</button></p>
+                <p><button onclick="sendMessage(0,1)">Vypnout zásuvku 1 </button></p>
+                <p id="ID1"></p>
+                <p id="jmeno1"></p>
+                <p id="stav1"></p>
+                <p id="prikonW1"></p>
+                <p id="SpotrebaWh1"></p>
             </div>
-            
-    
-        <div id="spodni-prava">
-        <h3>ZÁSUVKA 3</h3>
-            <p><button onclick="sendMessage(1,3)">Zapnout zásuvku 3</button></p>
-            <p><button onclick="sendMessage(0,3)">Vypnout zásuvku 3 </button></p>
-            <p id="ID3"></p>
-            <p id="jmeno3"></p>
-            <p id="stav3"></p>
-            <p id="prikonW3"></p>
-            <p id="SpotrebaWh3"></p>
+
+            <div id="horni-leva">
+                <h3>ZÁSUVKA 2</h3>
+                <p><button onclick="sendMessage(1,2)">Zapnout zásuvku 2</button></p>
+                <p><button onclick="sendMessage(0,2)">Vypnout zásuvku 2 </button></p>
+                <p id="ID2"></p>
+                <p id="jmeno2"></p>
+                <p id="stav2"></p>
+                <p id="prikonW2"></p>
+                <p id="SpotrebaWh2"></p>
             </div>
-    
+
+
+            <div id="spodni-prava">
+                <h3>ZÁSUVKA 3</h3>
+                <p><button onclick="sendMessage(1,3)">Zapnout zásuvku 3</button></p>
+                <p><button onclick="sendMessage(0,3)">Vypnout zásuvku 3 </button></p>
+                <p id="ID3"></p>
+                <p id="jmeno3"></p>
+                <p id="stav3"></p>
+                <p id="prikonW3"></p>
+                <p id="SpotrebaWh3"></p>
+            </div>
+
             <div id="spodni-leva">
-            <h3>ZASUVKA 4</h3>
-            <p id="ID4"></p>
-            <p id="jmeno4"></p>
-            <p id="stav4"></p>
-            <p id="prikonW4"></p>
-            <p id="SpotrebaWh4"></p>
+                <h3>ZASUVKA 4</h3>
+                <p id="ID4"></p>
+                <p id="jmeno4"></p>
+                <p id="stav4"></p>
+                <p id="prikonW4"></p>
+                <p id="SpotrebaWh4"></p>
             </div>
-    </div>
-        
+        </div>
+
     </section>
-    <section id="senzory"><h3>Data PAPAGO </h3>
+    <section id="senzory">
+        <h3>Data PAPAGO </h3>
         <p id="typ"></p>
         <p id="teplotaA"></p>
         <p id="vlhkost"></p>
         <p id="rosnyBod"></p>
         <p id="teplotaB"></p>
     </section>
-    <section id="oNas"></section>
+    <section id="oNas">
+        <div class="TextDiv">
+            <p> Ahoj,<br>
 
-    
-    <p><button onclick="nastavHodnotuVlhkosti('+')"> + </button></p>
-    <p id="display">50</p>
-    <p><button onclick="nastavHodnotuVlhkosti('-')"> - </button></p>
-        
-        
- 
-        <script src="script.js"></script>
-    
-    </body>
-    
-    </html>
+                jsme čtyřlenný tým, od vysokoškolačky, které tento projekt pomůže v chystané diplomové práci, po
+                středoškoláky studující všeobecná gymnázium či grafický design. Všechny nás dohromady spojila IT Letní
+                Škola
+                s touhou naučit se něco nového. Během ní jsme si všichni vybrali tento projekt a Vy jste právě viděli
+                výsledek.</p>
+            <p>Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému
+                jsme
+                se naučili něco nového a to vše jsme byli schopni použít v tomto projektu. <br> Děkujeme!!! </p>
+            <!--(přidat logo czechitas????????) nejakou fotku?????????-->
+        </div>
+    </section>
+
+
+    <section class="autoTlacitka">
+        <button onclick="nastavHodnotuVlhkosti('+')"> + </button>
+        <p id="display">50</p>
+        <button onclick="nastavHodnotuVlhkosti('-')"> - </button>
+
+    </section>
 
 
 
+    <script src="script.js"></script>
 
 
     <footer>
-        Rádi bychom poděkovali i všem lektorům a koučům, které jsme v průběhu letní školy potkali. Díky každému jsme se naučili něco nového a to vše jsme byli schopni použít v tomto projektu. <br> Děkujeme!!!
+        © 2022, CLEVERLET
     </footer>
     <script src="script.js"></script>
 </body>
