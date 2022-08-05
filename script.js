@@ -92,6 +92,7 @@ function sendMessage( akce, idZasuvky) {
     if (akce==0){
         if(idZasuvky == 1){
             message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":1,\"Action\":0}]}");
+
         } else if (idZasuvky == 2) { 
             message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":0}]}");
         } else if(idZasuvky ==3) {
@@ -137,10 +138,12 @@ function automatOvladani(message) {
 
     if(novaVlhkost > vlhkostNastavenaUzivatelem){
         sendMessage(1, 4)
+        zasuvka4b()
        // message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":0}]}");
         console.log("Zapnuto") 
     }else if(novaVlhkost <= vlhkostNastavenaUzivatelem){
         sendMessage(0, 4)
+        zasuvka4()
         //message = new Paho.MQTT.Message("{\"Operation\":\"SetOutputs\",\"Outputs\":[{\"ID\":2,\"Action\":1}]}");
         console.log("Vypnuto") 
     }else{
@@ -266,5 +269,47 @@ const config = {
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, config)
 
+
+
 //konec nastavení grafu teplota a vlhkost
 
+
+function zasuvka1(){
+    document.getElementById("prvniZasuvkaZ").style="display: none"
+    
+}
+
+function zasuvka1b(){
+    document.getElementById("prvniZasuvkaZ").style=null
+    
+}
+
+function zasuvka2(){
+    document.getElementById("druhaZasuvkaZ").style="display: none"
+    
+}
+
+function zasuvka2b(){
+    document.getElementById("druhaZasuvkaZ").style=null
+    
+}
+
+function zasuvka3(){
+    document.getElementById("tretiZasuvkaZ").style="display: none"
+    
+}
+
+function zasuvka3b(){
+    document.getElementById("tretiZasuvkaZ").style=null
+    
+}
+
+function zasuvka4(){
+    document.getElementById("ctvrtaZasuvkaZ").style="display: none"
+    
+}
+
+function zasuvka4b(){
+    document.getElementById("ctvrtaZasuvkaZ").style=null
+    
+}
