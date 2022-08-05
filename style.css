@@ -148,3 +148,18 @@ footer {
     height: 250px;
     left: 658px;
 }
+
+#chart {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 2600px;
+    left: 350px;
+}
+
+.autoTlacitka {
+    position: absolute;
+    top: 2000px;
+    left: 1100px;
+    width: ;
+}
